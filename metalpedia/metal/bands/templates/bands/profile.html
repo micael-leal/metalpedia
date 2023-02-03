@@ -1,0 +1,18 @@
+{% extends 'bands/base.html' %}
+{% block content %}
+<body>
+    <div class="profile">
+        <p class="profileTxt">Username: {{user.username}}</p>
+        <table>
+          <caption class="addedTable">Bands added by you</caption>
+          {% for band in bandsAdded %}
+          <tr>
+            <td class="bandName"><a class="bandNameLink" href="/metalpedia/{{band.id}}/">{{band.name}}</a></td>
+          </tr>
+          {% endfor %}
+        </table>
+    
+    </div>
+
+</body>
+{% endblock %}

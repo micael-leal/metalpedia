@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metalpedia - Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bands/style.css' %}">
+    <script src="https://kit.fontawesome.com/2849b836cf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+      <h1 class="title">MetalPedia</h1>
+      {% if user.is_authenticated %}
+      <button class="loginRegisterBtn"><a class="loginRegisterTxt"href="{% url 'logout' %}">Log Out</a></button>
+      <p style="color:rgb(238, 228, 228);
+      font-size: 25px;
+      font-family: 'Ubuntu';
+      float: right;
+      font-weight: 600;
+      padding-top:55px;
+      padding-right:15px;
+      ">logged in as <a href="/metalpedia/profile/">{{user.username}}</a></p>
+      {% else %}
+      <button class="loginRegisterBtn"><a class="loginRegisterTxt" href="/metalpedia/login/">Login</a></button>
+      <button class="loginRegisterBtn"><a class="loginRegisterTxt"href="/metalpedia/register/">Register</a></button>
+      {% endif %}
+    </header>
+    <ul class="navBar">
+      <div class="navBarLinks">
+        <li><a href="/metalpedia/">HOME</a></li>
+        <li><a href="/metalpedia/about/">ABOUT</a></li>
+        <li><a href="/metalpedia/bands/">BANDS</a></li>
+      </div>
+    </ul>
+
+<body>
+  {% block content %}
+  {% endblock %}
+</body>
+
+<footer>
+  <p class="footerTxt">All rights reserved <i class="fa-solid fa-copyright"></i> developed by Micael Leal</p>
+</footer>
+</html>

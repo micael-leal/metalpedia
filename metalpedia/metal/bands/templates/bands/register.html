@@ -1,0 +1,35 @@
+{% extends 'bands/base.html' %}
+{% block content %}
+<body>
+      <div class="registerDiv">
+        {% if messages %}
+     {% for message in messages%}
+       <p style="color:rgb(238, 228, 228);
+       font-size: 25px;
+       font-family: 'Ubuntu';">{{message}}</p>
+     {% endfor%}
+  {% endif%}
+        <form action="{% url 'register' %}" method="POST">{% csrf_token %}
+          <div class="container">
+            <h1 class="registerTitle">Sign Up</h1>
+            <p class="registerTxt">please fill in this form to create an account</p>
+            <hr>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email">
+
+            <label for="userName"><b>User name</b></label>
+            <input type="text" placeholder="Enter User Name" name="userName">
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter password" name="psw">
+
+            <div class="clearfix">
+              <button type="button" class="cancelBtn">Cancel</button>
+              <button type="submit" class="signUpBtn">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+</body>
+{% endblock %}

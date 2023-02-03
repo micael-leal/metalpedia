@@ -1,0 +1,28 @@
+{% extends 'bands/base.html' %}
+{% block content %}
+<body>
+  {% if messages %}
+     {% for message in messages%}
+       <p style="color:rgb(238, 228, 228);
+       font-size: 25px;
+       font-family: 'Ubuntu';
+       text-align:center;
+       margin-top:20px;
+       ">{{message}}</p>
+     {% endfor%}
+  {% endif%}
+    <div class="newsDiv">
+      <table class="newsTable">
+        <caption>news</caption>
+        {% for news in news_list%}
+        <tr>
+          <td><a class="newsTitle" href="/metalpedia/news/{{news.id}}/">{{news.title}}</a></td>
+          <td class="newsDate">{{news.pub_date}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+</body>
+{% endblock %}
+
+

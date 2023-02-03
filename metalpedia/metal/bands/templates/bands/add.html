@@ -1,0 +1,31 @@
+{% extends 'bands/base.html' %}
+{% block content %}
+<body>
+<div class="addDiv" >
+  <h1 class="addTitle">Add band</h1>
+  <form class="addForm" action="addband/" method="post">
+  {% csrf_token %}
+  Name:<br>
+  <input name="name">
+  <br><br>
+  Genre:<br>
+  <input name="genre">
+  <br><br>
+  Country:<br>
+  <input name="country">
+  <br><br>
+  Status:<br>
+  <input name="status">
+  <br><br>
+  Formed:<br>
+  <input name="formed">
+  <br><br>
+  Notes:<br>
+  <input name="notes">
+  <br><br>
+  <input class="addSubmit" type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+{% endblock %}

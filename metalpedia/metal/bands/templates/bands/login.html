@@ -1,0 +1,30 @@
+{% extends 'bands/base.html' %}
+{% block content %}
+<body>
+    <div class="loginDiv">
+        <form action="{% url 'login' %}" method="POST">{% csrf_token %}
+            <h1 class="loginTitle">Login</h1>
+            <hr>
+            {% if messages %}
+     {% for message in messages%}
+       <p style="color:rgb(238, 228, 228);
+       font-size: 25px;
+       font-family: 'Ubuntu';
+       font-weight: 600;
+       text-align:center;
+       ">{{message}}</p>
+     {% endfor%}
+  {% endif%}
+            <div class="container">
+                <label for="username"><b>User Name</b></label>
+                <input type="text" placeholder="enter username" name="username" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="enter password" name="psw" required>
+
+                <button class="loginBtn" type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+{% endblock %}

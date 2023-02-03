@@ -1,0 +1,23 @@
+{% extends 'bands/base.html' %}
+{% block content %}
+<body>
+    <div class="viewBand">
+      <div class="bandDiv">
+        <a href=""><i class="fa-regular fa-star"></i></a>
+        <h1 class="bandInformation">Name: {{ bands_list.name}} </h1>
+        <h1 class="bandInformation">Genre: {{ bands_list.genre}} </h1>
+        <h1 class="bandInformation">Country: {{ bands_list.country}} </h1>
+        <h1 class="bandInformation">Status: {{ bands_list.status}} </h1>
+        <h1 class="bandInformation">Formed in: {{ bands_list.formed}} </h1>
+        <img src="{{ band.logo.url }}"/>
+        <img src="{{ band.members_photo.url }}"/>
+        <p class="bandInformationNotes">{{ bands_list.notes|safe}}</p>
+        </div>
+    </div>
+  <button class="addBtn"><a class="addBtnTxt" href="/metalpedia/add/">Add Band</a></button>
+
+    
+
+</ul>
+</body>
+{% endblock %}
