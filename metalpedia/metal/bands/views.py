@@ -98,6 +98,13 @@ def profile(request):
     template = 'bands/profile.html'
     return render(request,template,{'bandsAdded':bandsAdded,'user':user})
 
+
+def delete_account(request):
+    user = request.user
+    user.delete()
+    messages.success(request,("account deleted"))
+    return redirect('index')
+    
 #def pagination(request):
     #bands_list = Band.objects.all()
     #paginator = Paginator(bands_list,5)
