@@ -8,9 +8,11 @@
         <table>
           <caption class="addedTable">Bands added by you</caption>
           {% for band in bandsAdded %}
+          {% if band.approved %}
           <tr>
             <td class="bandName"><a class="bandNameLink" href="/metalpedia/{{band.id}}/">{{band.name}}</a></td>
           </tr>
+          {% endif %}
           {% endfor %}
         </table>
     

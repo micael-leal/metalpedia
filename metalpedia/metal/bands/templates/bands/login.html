@@ -2,7 +2,7 @@
 {% block content %}
 <body>
     <div class="loginDiv">
-        <form action="{% url 'login' %}" method="POST">{% csrf_token %}
+        <form action="{% url 'loginUser' %}" method="POST">{% csrf_token %}
             <h1 class="loginTitle">Login</h1>
             <hr>
             {% if messages %}
@@ -23,6 +23,7 @@
                 <input type="password" placeholder="enter password" name="psw" required>
 
                 <button class="loginBtn" type="submit">Login</button>
+                <button class="loginBtn"><a class="recoveryBtn" href="/accounts/password_reset/">forgot password?</a></button>
             </div>
         </form>
     </div>

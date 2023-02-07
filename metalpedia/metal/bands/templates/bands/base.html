@@ -22,6 +22,8 @@
       padding-top:55px;
       padding-right:15px;
       ">logged in as <a href="/metalpedia/profile/">{{user.username}}</a></p>
+      <button class="loginRegisterBtn"><a class="loginRegisterTxt"href="{% url 'logoutUser' %}">Log Out</a></button>
+
       {% else %}
       <button class="loginRegisterBtn"><a class="loginRegisterTxt" href="/metalpedia/login/">Login</a></button>
       <button class="loginRegisterBtn"><a class="loginRegisterTxt"href="/metalpedia/register/">Register</a></button>

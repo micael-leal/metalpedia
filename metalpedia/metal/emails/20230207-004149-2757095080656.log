@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: rupert.parker232@gmail.com
+Date: Tue, 07 Feb 2023 03:41:49 -0000
+Message-ID: <167574130925.9568.10566978787790485229@DESKTOP-OOONKTR>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/MTI/bj879p-c8248ec25d38ceb7f00ad08bcaeea1e3/
+
+Your username, in case you’ve forgotten: RupertParker
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------
